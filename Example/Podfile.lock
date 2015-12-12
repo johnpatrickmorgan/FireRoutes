@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (3.1.3)
+  - AlamofireObjectMapper (2.1.0):
+    - Alamofire (~> 3.1.0)
+    - ObjectMapper (~> 1.0)
+  - FireRoutes (0.1.0):
+    - Alamofire
+  - ObjectMapper (1.0.1)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper
+  - FireRoutes (from `../`)
+
+EXTERNAL SOURCES:
+  FireRoutes:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
+  AlamofireObjectMapper: 24097576202064f8b0a583452dd934064f78dc0e
+  FireRoutes: 8778887cf1f1db167cdb6b732edd210cac828d4f
+  ObjectMapper: 98524bac0dca46c6b3d5ee02cd410fc700ec6ce2
+
+COCOAPODS: 0.39.0
