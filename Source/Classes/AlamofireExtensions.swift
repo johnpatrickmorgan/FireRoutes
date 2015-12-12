@@ -41,3 +41,18 @@ extension Manager {
     }
 }
 
+extension Request {
+    
+    public static func imageResponseSerializer() -> ResponseSerializer<UIImage, NSError> {
+        
+        return ResponseSerializer { request, response, data, error in
+            if let data = data, image = UIImage(data: data) {
+                return Result.Success(image)
+            }
+            else {
+                let serializationError = Error.errorWithCode(.DataSerializationFailed, failureReason: "Unable to create UIImage from data")
+                return Result.Failure(error ?? serializationError)
+            }
+        }
+    }
+}
