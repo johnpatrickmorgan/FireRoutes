@@ -37,15 +37,7 @@ class ImageRoute: Route<UIImage,NSError> {
     init(userId: String) {
         super.init()
         URLRequest = GET(baseURL + "/avatar", parameters: ["userid" : userId])
-        responseSerializer = ResponseSerializer { request, response, data, error in
-            if let data = data, image = UIImage(data: data) {
-                return Result.Success(image)
-            }
-            else {
-                let serializationError = Error.errorWithCode(.DataSerializationFailed, failureReason: "Unable to create image from data")
-                return Result.Failure(error ?? serializationError)
-            }
-        }
+        responseSerializer = Request.imageResponseSerializer()
     }
 }
 
