@@ -20,7 +20,7 @@ class AvatarRoute: Route<UIImage, NSError> {
   
     init(userId: String) {
         super.init()
-        URLRequest = GET(baseURL + "/avatar/\(userId)")
+        URLRequest = GET(baseURL + "/avatar/\(userId)_img.png")
         responseSerializer = Request.imageResponseSerializer()
     }
 }
@@ -86,7 +86,8 @@ pod 'FireRoutes'
 
 ## Author
 
-johnpatrickmorgan, johnpatrickmorganuk@gmail.com
+johnpatrickmorgan, johnpatrickmorganuk@gmail.com.
+
 Partly inspired by [Moya](http://github.com/Moya/Moya).
 
 ## License
