@@ -8,7 +8,7 @@
 
 import Alamofire
 
-public class Route<U, V: ErrorType>: URLRequestConvertible, ResponseSerializerType, Stubbable {
+public class Route<U, V: ErrorType>: URLRequestConvertible, ResponseSerializerType {
 
     public typealias SerializedObject = U
     public typealias ErrorObject = V
@@ -35,8 +35,3 @@ public class Route<U, V: ErrorType>: URLRequestConvertible, ResponseSerializerTy
 public typealias RequestResult = Result<NSData, NSError>
 
 public typealias RequestStub = (result: RequestResult, delay: NSTimeInterval)
-
-protocol Stubbable : ResponseSerializerType {
-    
-    var stub: RequestStub? { get set }
-}
