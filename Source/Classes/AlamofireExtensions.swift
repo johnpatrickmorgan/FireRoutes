@@ -1,15 +1,27 @@
 //
-//  ManagerExtension.swift
-//  Pods
+//  AlamofireExtensions.swift
+//  FireRoutes
 //
-//  Created by John Morgan on 12/12/2015.
-//
+//  Created by jmorgan on 12/06/2015.
+//  Copyright (c) 2015 jmorgan. All rights reserved.
 //
 
 import Alamofire
 
+/**
+ Extension with convenience methods for easily requesting or stubbing a `Route`.
+ */
 extension Manager {
     
+    /**
+     Initiates the route's `URLRequest`, to be serialized by the route's `responseSerializer` into a `Response` which is
+     then passed into the completion handler. The type of the `response.result.value` and `response.result.value` are
+     inferred according to the route's type. If the route has a non-nil stub property, the stub data will be used instead
+     of making the request.
+     
+     - parameter route:             The route to use for requesting and serializing.
+     - parameter completionHandler: The handler to be called on completion of the request.
+     */
     public func request<T, U>(route: Route<T, U>, completionHandler:(Response<T, U>) -> Void) {
         
         if let stub = route.stub {
@@ -19,6 +31,16 @@ extension Manager {
         }
     }
     
+    /**
+     Stubs the route's `URLRequest` with data / error from the `RequestStub` after the delay specified by the `RequestStub`.
+     The data will be serialized by the route's `responseSerializer` into a `Response` which is
+     then passed into the completion handler. The type of the `response.result.value` and `response.result.value` are
+     inferred according to the route's type.
+     
+     - parameter route:             The route to use for stubbing and serializing.
+     - parameter stub:              The stub result and delay to use for stubbing and serializing.
+     - parameter completionHandler: The handler to be called on completion of the request.
+     */
     public func stub<T, U>(route:Route<T, U>, stub: RequestStub, completionHandler:(Response<T, U>) -> Void) {
         
         let request = route.URLRequest
@@ -41,10 +63,18 @@ extension Manager {
     }
 }
 
+/**
+ Extension with convenience methods for serializing response data.
+ */
 extension Request {
     
+    /**
+     Provides a `ResponseSerializer` instance for serializing image data into a UIImage.
+     
+     - returns: A `ResponseSerializer` instance for serializing image data.
+     */
     public static func imageResponseSerializer() -> ResponseSerializer<UIImage, NSError> {
-        
+
         return ResponseSerializer { request, response, data, error in
             if let data = data, image = UIImage(data: data) {
                 return Result.Success(image)
