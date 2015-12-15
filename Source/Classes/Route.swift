@@ -26,6 +26,10 @@ public class Route<U, V: ErrorType>: URLRequestConvertible, ResponseSerializerTy
     }
     
     public var stub: RequestStub? = nil
+    
+    public init() {
+        
+    }
 }
 
 public typealias RequestResult = Result<NSData, NSError>
