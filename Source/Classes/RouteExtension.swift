@@ -30,7 +30,7 @@ extension Route {
         return request(method: .GET, url: url, parameters: parameters, encoding: encoding, headers: headers)
     }
     
-    final public func POST(url: URLStringConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = .URL, headers: [String : String]? = nil) -> NSMutableURLRequest {
+    final public func POST(url: URLStringConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = .JSON, headers: [String : String]? = nil) -> NSMutableURLRequest {
         
         return request(method: .POST, url: url, parameters: parameters, encoding: encoding, headers: headers)
     }
