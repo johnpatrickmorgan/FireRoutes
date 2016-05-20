@@ -1,8 +1,8 @@
-# FireRoutes
+# 🔥 FireRoutes 🔥
 
-🔥 [![Version](https://img.shields.io/cocoapods/v/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes)
+[![Version](https://img.shields.io/cocoapods/v/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes)
 [![License](https://img.shields.io/cocoapods/l/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes)
-[![Platform](https://img.shields.io/cocoapods/p/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes) 🔥
+[![Swift](https://img.shields.io/badge/Swift-2.2-orange.svg)
 
 FireRoutes is a lightweight extension to [Alamofire](https://github.com/Alamofire/Alamofire) that simplifies network calls through the concept of a `Route`.
 
@@ -83,12 +83,8 @@ it, simply add the following line to your Podfile:
 pod 'FireRoutes'
 ```
 
-## Author
-
-johnpatrickmorgan, johnpatrickmorganuk@gmail.com.
-
-Partly inspired by [Moya](http://github.com/Moya/Moya).
-
 ## License
 
 FireRoutes is available under the MIT license. See the LICENSE file for more info.
+
+Partly inspired by [Moya](http://github.com/Moya/Moya).
