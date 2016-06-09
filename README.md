@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/cocoapods/v/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes)
 [![License](https://img.shields.io/cocoapods/l/FireRoutes.svg?style=flat)](http://cocoapods.org/pods/FireRoutes)
-[![Swift](https://img.shields.io/badge/Swift-2.2-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-2.2-orange.svg)
 
 FireRoutes is a lightweight extension to [Alamofire](https://github.com/Alamofire/Alamofire) that simplifies network calls through the concept of a `Route`.
 
