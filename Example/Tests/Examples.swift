@@ -6,64 +6,26 @@
 //
 //
 
-@testable import FireRoutes
+import FireRoutes
 import Foundation
 import Alamofire
-import ObjectMapper
-import AlamofireObjectMapper
 
 let baseURL = "http://www.myserver.com/api"
 
-class StringRoute: Route<String,NSError> {
+class StringRoute: Route<String> {
     
     override init() {
         super.init()
-        URLRequest = GET(baseURL + "/status")
-        responseSerializer = Request.stringResponseSerializer()
+        request = GET(baseURL + "/status")
+        responseSerializer = DataRequest.stringResponseSerializer()
     }
 }
 
-class JSONRoute: Route<AnyObject,NSError> {
+class JSONRoute: Route<Any> {
 
     override init() {
         super.init()
-        URLRequest = GET(baseURL + "/example")
-        responseSerializer = Request.JSONResponseSerializer()
-    }
-}
-
-class ImageRoute: Route<UIImage,NSError> {
-    
-    init(userId: String) {
-        super.init()
-        URLRequest = GET(baseURL + "/avatar", parameters: ["userid" : userId])
-        responseSerializer = Request.imageResponseSerializer()
-    }
-}
-
-struct MappedModel: Mappable {
-    
-    var exampleURL: NSURL!
-    var exampleString: String!
-    var exampleInt: Int!
-    
-    init?(_ map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        
-        exampleURL       <- (map["Example_URL"], URLTransform())
-        exampleString    <- (map["Example_String"])
-        exampleInt       <- (map["Example_Int"])
-    }
-}
-
-class MappedModelRoute: Route<MappedModel,NSError> {
-    
-    override init() {
-        super.init()
-        URLRequest = GET(baseURL + "/model")
-        responseSerializer = Request.ObjectMapperSerializer(nil)
+        request = GET(baseURL + "/example")
+        responseSerializer = DataRequest.jsonResponseSerializer()
     }
 }

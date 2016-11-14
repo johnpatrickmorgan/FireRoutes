@@ -24,19 +24,14 @@ extension Route {
      
      - returns: A NSMutableURLRequest instance.
      */
-    final public func request(method method: Alamofire.Method = .GET, url: URLStringConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = .URL, headers: [String : String]? = nil) -> NSMutableURLRequest {
-        
-        let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: url.URLString)!)
-        mutableURLRequest.HTTPMethod = method.rawValue
-        
-        if let headers = headers {
-            for (headerField, headerValue) in headers {
-                mutableURLRequest.setValue(headerValue, forHTTPHeaderField: headerField)
-            }
+    final public func request(_ method: Alamofire.HTTPMethod = .get, _ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequestConvertible? {
+
+        do {
+            let urlRequest = try URLRequest(url: url, method: method, headers: headers)
+            return try encoding.encode(urlRequest, with: parameters)
+        } catch {
+            return nil
         }
-        let encodedURLRequest = encoding.encode(mutableURLRequest, parameters: parameters).0
-        
-        return encodedURLRequest
     }
     
     /**
@@ -49,9 +44,9 @@ extension Route {
      
      - returns: A NSMutableURLRequest instance.
      */
-    final public func GET(url: URLStringConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = .URL, headers: [String : String]? = nil) -> NSMutableURLRequest {
+    final public func GET(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequestConvertible? {
         
-        return request(method: .GET, url: url, parameters: parameters, encoding: encoding, headers: headers)
+        return request(.get, url, parameters: parameters, encoding: encoding, headers: headers)
     }
     
     /**
@@ -64,8 +59,8 @@ extension Route {
      
      - returns: A NSMutableURLRequest instance.
      */
-    final public func POST(url: URLStringConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = .JSON, headers: [String : String]? = nil) -> NSMutableURLRequest {
+    final public func POST(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequestConvertible? {
         
-        return request(method: .POST, url: url, parameters: parameters, encoding: encoding, headers: headers)
+        return request(.post, url, parameters: parameters, encoding: encoding, headers: headers)
     }
 }

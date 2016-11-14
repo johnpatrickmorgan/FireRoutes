@@ -7,32 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52FFA9541C16289900D787CF /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFA9531C16289900D787CF /* Examples.swift */; };
-		52FFA9851C162B7C00D787CF /* FireRoutes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FFA9841C162B7C00D787CF /* FireRoutes.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		82E317751C1713B7000D3B72 /* JSONRouteSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 82E317741C1713B7000D3B72 /* JSONRouteSample.json */; };
-		82E317771C17144A000D3B72 /* ImageRouteSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E317761C17144A000D3B72 /* ImageRouteSample.png */; };
-		82E3179A1C17479D000D3B72 /* MappedModelRouteSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 82E317991C17479D000D3B72 /* MappedModelRouteSample.json */; };
-		82E3179C1C1752A7000D3B72 /* StringRouteSample.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82E3179B1C1752A7000D3B72 /* StringRouteSample.txt */; };
-		C01CBACBE96F7E6BC9B9D3CC /* Pods_FireRoutes_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC88FC596D421A3652CBC2F /* Pods_FireRoutes_Tests.framework */; };
+		82F22E0C1DDA32EB00ED2969 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F22E081DDA32EB00ED2969 /* Examples.swift */; };
+		82F22E0D1DDA32EB00ED2969 /* JSONRouteSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */; };
+		82F22E0E1DDA32EB00ED2969 /* StringRouteSample.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */; };
+		F0BE301F2E241C21EECDBF28 /* Pods_FireRoutes_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1259E60711DFC5095234C76E /* Pods_FireRoutes_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03320C96CCDAE07F77C60828 /* Pods-FireRoutes_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRoutes_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		15CDAE1D1360A034DA186667 /* FireRoutes.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FireRoutes.podspec; path = ../FireRoutes.podspec; sourceTree = "<group>"; };
-		4AB3C49DBF970E99D962124A /* Pods-FireRoutes_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRoutes_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		52FFA9531C16289900D787CF /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
-		52FFA9841C162B7C00D787CF /* FireRoutes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FireRoutes.framework; path = "Pods/../build/Debug-iphoneos/FireRoutes.framework"; sourceTree = "<group>"; };
+		064171F36E0D5B5EBD8E35BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1259E60711DFC5095234C76E /* Pods_FireRoutes_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRoutes_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AEEEE353005D7D685B44E7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		30D05D22850E6E10E2F6DFAF /* Pods-FireRoutes_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRoutes_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* FireRoutes_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireRoutes_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		829EAD3313D502919413A232 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		82E317741C1713B7000D3B72 /* JSONRouteSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONRouteSample.json; sourceTree = "<group>"; };
-		82E317761C17144A000D3B72 /* ImageRouteSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageRouteSample.png; sourceTree = "<group>"; };
-		82E317991C17479D000D3B72 /* MappedModelRouteSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MappedModelRouteSample.json; sourceTree = "<group>"; };
-		82E3179B1C1752A7000D3B72 /* StringRouteSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringRouteSample.txt; sourceTree = "<group>"; };
-		A325AF6CB92597CF74679570 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		BBC88FC596D421A3652CBC2F /* Pods_FireRoutes_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRoutes_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D2A6024BAC2FC26D7E6D74 /* Pods-FireRoutes_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRoutes_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7D7AA0F29B97607AB98F712A /* FireRoutes.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FireRoutes.podspec; path = ../FireRoutes.podspec; sourceTree = "<group>"; };
+		82F22E081DDA32EB00ED2969 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONRouteSample.json; sourceTree = "<group>"; };
+		82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringRouteSample.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,22 +34,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFA9851C162B7C00D787CF /* FireRoutes.framework in Frameworks */,
-				C01CBACBE96F7E6BC9B9D3CC /* Pods_FireRoutes_Tests.framework in Frameworks */,
+				F0BE301F2E241C21EECDBF28 /* Pods_FireRoutes_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A4B0AAA96CDB27D7FCA39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1259E60711DFC5095234C76E /* Pods_FireRoutes_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				E852D186B8431F44414D11A6 /* Pods */,
-				791EDF536B9726EE9945CD50 /* Frameworks */,
+				C1135709855E522C03D66E60 /* Pods */,
+				27A4B0AAA96CDB27D7FCA39A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,8 +71,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				82E317731C17138B000D3B72 /* Sample Data */,
-				52FFA9531C16289900D787CF /* Examples.swift */,
+				82F22E081DDA32EB00ED2969 /* Examples.swift */,
+				82F22E091DDA32EB00ED2969 /* Sample Data */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -89,38 +90,27 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				15CDAE1D1360A034DA186667 /* FireRoutes.podspec */,
-				829EAD3313D502919413A232 /* README.md */,
-				A325AF6CB92597CF74679570 /* LICENSE */,
+				7D7AA0F29B97607AB98F712A /* FireRoutes.podspec */,
+				064171F36E0D5B5EBD8E35BD /* README.md */,
+				1AEEEE353005D7D685B44E7D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		791EDF536B9726EE9945CD50 /* Frameworks */ = {
+		82F22E091DDA32EB00ED2969 /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
-				52FFA9841C162B7C00D787CF /* FireRoutes.framework */,
-				BBC88FC596D421A3652CBC2F /* Pods_FireRoutes_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		82E317731C17138B000D3B72 /* Sample Data */ = {
-			isa = PBXGroup;
-			children = (
-				82E3179B1C1752A7000D3B72 /* StringRouteSample.txt */,
-				82E317761C17144A000D3B72 /* ImageRouteSample.png */,
-				82E317991C17479D000D3B72 /* MappedModelRouteSample.json */,
-				82E317741C1713B7000D3B72 /* JSONRouteSample.json */,
+				82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */,
+				82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */,
 			);
 			path = "Sample Data";
 			sourceTree = "<group>";
 		};
-		E852D186B8431F44414D11A6 /* Pods */ = {
+		C1135709855E522C03D66E60 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4AB3C49DBF970E99D962124A /* Pods-FireRoutes_Tests.debug.xcconfig */,
-				03320C96CCDAE07F77C60828 /* Pods-FireRoutes_Tests.release.xcconfig */,
+				30D05D22850E6E10E2F6DFAF /* Pods-FireRoutes_Tests.debug.xcconfig */,
+				66D2A6024BAC2FC26D7E6D74 /* Pods-FireRoutes_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -132,12 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FireRoutes_Tests" */;
 			buildPhases = (
-				A94C148F28935700D56B7713 /* Check Pods Manifest.lock */,
+				FF4CBA875002C8843502C3BE /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				EDA368921B41AF14BEDB2861 /* Embed Pods Frameworks */,
-				7047F1FED9AE4D3DCFF963D1 /* Copy Pods Resources */,
+				982DA540C690DE7A7758A6C8 /* [CP] Embed Pods Frameworks */,
+				2E5C4BA49B9F96DC7ECB7EA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,8 +144,8 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
@@ -187,24 +177,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E3179A1C17479D000D3B72 /* MappedModelRouteSample.json in Resources */,
-				82E3179C1C1752A7000D3B72 /* StringRouteSample.txt in Resources */,
-				82E317751C1713B7000D3B72 /* JSONRouteSample.json in Resources */,
-				82E317771C17144A000D3B72 /* ImageRouteSample.png in Resources */,
+				82F22E0D1DDA32EB00ED2969 /* JSONRouteSample.json in Resources */,
+				82F22E0E1DDA32EB00ED2969 /* StringRouteSample.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7047F1FED9AE4D3DCFF963D1 /* Copy Pods Resources */ = {
+		2E5C4BA49B9F96DC7ECB7EA9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,34 +200,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A94C148F28935700D56B7713 /* Check Pods Manifest.lock */ = {
+		982DA540C690DE7A7758A6C8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EDA368921B41AF14BEDB2861 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4CBA875002C8843502C3BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -249,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52FFA9541C16289900D787CF /* Examples.swift in Sources */,
+				82F22E0C1DDA32EB00ED2969 /* Examples.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +265,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -295,11 +282,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -323,10 +311,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,60 +321,47 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AB3C49DBF970E99D962124A /* Pods-FireRoutes_Tests.debug.xcconfig */;
+			baseConfigurationReference = 30D05D22850E6E10E2F6DFAF /* Pods-FireRoutes_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Target Support Files/**",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireRoutes_Example.app/FireRoutes_Example";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03320C96CCDAE07F77C60828 /* Pods-FireRoutes_Tests.release.xcconfig */;
+			baseConfigurationReference = 66D2A6024BAC2FC26D7E6D74 /* Pods-FireRoutes_Tests.release.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Target Support Files/**",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireRoutes_Example.app/FireRoutes_Example";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
