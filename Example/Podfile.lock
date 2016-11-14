@@ -1,24 +1,32 @@
 PODS:
-  - Alamofire (3.1.3)
-  - AlamofireObjectMapper (2.1.0):
-    - Alamofire (~> 3.1.0)
+  - Alamofire (3.5.1)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
     - ObjectMapper (~> 1.0)
-  - FireRoutes (0.1.0):
-    - Alamofire
-  - ObjectMapper (1.0.1)
+  - FireRoutes (0.1.1):
+    - Alamofire (~> 3.5)
+  - Nimble (4.1.0)
+  - ObjectMapper (1.5.0)
+  - Quick (0.9.3)
 
 DEPENDENCIES:
   - AlamofireObjectMapper
   - FireRoutes (from `../`)
+  - Nimble (= 4.1.0)
+  - Quick (= 0.9.3)
 
 EXTERNAL SOURCES:
   FireRoutes:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
-  AlamofireObjectMapper: 24097576202064f8b0a583452dd934064f78dc0e
-  FireRoutes: 8778887cf1f1db167cdb6b732edd210cac828d4f
-  ObjectMapper: 98524bac0dca46c6b3d5ee02cd410fc700ec6ce2
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  FireRoutes: 1e9e974c7cba3ce200b5130bec67479685d5ec93
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: dd54fa430a65ec49e8d0b1d0ec3ebec9c00bd655
+
+COCOAPODS: 1.1.1

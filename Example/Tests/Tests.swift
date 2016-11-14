@@ -2,18 +2,19 @@
 //
 import Quick
 import Nimble
-@testable import FireRoutes
+import FireRoutes
 import Alamofire
 
-func dataForFile(filename: String, type: String?) -> NSData? {
-    let bundle = NSBundle(forClass: StringRoute.self)
-    if let url = bundle.URLForResource(filename, withExtension: type) {
+class TableOfContentsSpec: QuickSpec {
+    
+    func dataForFile(filename: String, type: String?) -> NSData? {
+
+        guard let url = NSBundle(forClass: self.dynamicType).URLForResource(filename, withExtension: type) else {
+            return nil
+        }
         return NSData(contentsOfURL: url)
     }
-    return nil
-}
-
-class TableOfContentsSpec: QuickSpec {
+    
     override func spec() {
         
         let manager = Manager.sharedInstance
@@ -22,7 +23,7 @@ class TableOfContentsSpec: QuickSpec {
             let route = StringRoute()
             
             context("with delayed stubbed data") {
-                let data = dataForFile("StringRouteSample", type:"txt")!
+                let data = self.dataForFile("StringRouteSample", type:"txt")!
                 route.stub = (RequestResult.Success(data), 0.1)
                 
                 it("should succeed") {
@@ -42,7 +43,7 @@ class TableOfContentsSpec: QuickSpec {
             let route = JSONRoute()
             
             context("with delayed stubbed data") {
-                let data = dataForFile("JSONRouteSample", type:"json")!
+                let data = self.dataForFile("JSONRouteSample", type:"json")!
                 route.stub = (RequestResult.Success(data), 0.1)
                 
                 it("should succeed") {
@@ -65,7 +66,7 @@ class TableOfContentsSpec: QuickSpec {
             let route = ImageRoute(userId:"jmorgan")
             
             context("with delayed stubbed data") {
-                let data = dataForFile("ImageRouteSample", type:"png")!
+                let data = self.dataForFile("ImageRouteSample", type:"png")!
                 route.stub = (RequestResult.Success(data), 0.1)
                 
                 it("should succeed") {
@@ -85,7 +86,7 @@ class TableOfContentsSpec: QuickSpec {
             let route = MappedModelRoute()
             
             context("with delayed stubbed data") {
-                let data = dataForFile("MappedModelRouteSample", type:"json")!
+                let data = self.dataForFile("MappedModelRouteSample", type:"json")!
                 route.stub = (RequestResult.Success(data), 0.1)
                 
                 it("should succeed") {
