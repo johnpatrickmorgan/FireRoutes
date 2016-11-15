@@ -12,7 +12,7 @@ A `Route` represents how a particular network call should be structured and how 
 
 A `Route` subclass can be defined like so:
 
-```
+```swift
 let baseURL = "http://www.myserver.com/api"
 
 class AvatarRoute: Route<UIImage> {
@@ -30,7 +30,7 @@ This captures in a single class all of the client's expectations of the avatar e
 
 The `Route` concept also simplifies the code that originates the request:
 
-```
+```swift
 manager.request(AvatarRoute(userID:"jmorgan")) { response in
 
 	// compiler infers response.result.value to be of UIImage type
@@ -43,7 +43,7 @@ The compiler infers the correct `Result` type, keeping your code clean and simpl
 
 Despite its simple approach, FireRoutes retains all the flexibility of `URLRequestConvertible` and `DataResponseSerializerProtocol`. You can use it in conjunction with other Alamofire extensions such as [AlamofireObjectMapper](https://github.com/tristanhimmelman/AlamofireObjectMapper) to generate custom model objects...
 
-```
+```swift
 class MappedModelRoute: Route<MappedModel> {
     
     override init() {
@@ -55,7 +55,7 @@ class MappedModelRoute: Route<MappedModel> {
 ```
 ...which means the response will be parsed and mapped into your custom model object:
 
-```
+```swift
 manager.request(MappedModelRoute()) { response in
 	
 	// compiler infers response.result.value to be of MappedModel type
