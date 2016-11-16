@@ -53,6 +53,49 @@ class TableOfContentsSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("An image route") {
+            let route = ImageRoute(userId:"jmorgan")
+            
+            context("with delayed stubbed data") {
+                let data = dataForFile("ImageRouteSample", type:"png")!
+                let stub = (RequestResult.success(data), 0.1)
+                
+                it("should succeed") {
+                    waitUntil { done in
+                        manager.stub(route, stub: stub) { (response) -> Void in
+                            expect(response.result.value).toNot(beNil())
+                            expect(response.result.error).to(beNil())
+                            expect(response.result.value!.size.width).to(equal(640.0))
+                            done()
+                        }
+                    }
+                }
+            }
+        }
+        
+        describe("A mapped model route") {
+            let route = MappedModelRoute()
+            
+            context("with delayed stubbed data") {
+                let data = dataForFile("MappedModelRouteSample", type:"json")!
+                let stub = (RequestResult.success(data), 0.1)
+                
+                it("should succeed") {
+                    waitUntil { done in
+                        manager.stub(route, stub: stub) { (response) -> Void in
+                            expect(response.result.value).toNot(beNil())
+                            expect(response.result.error).to(beNil())
+                            let mappedModel = response.result.value
+                            expect(mappedModel!.exampleURL).toNot(beNil())
+                            expect(mappedModel!.exampleInt).to(equal(42))
+                            expect(mappedModel!.exampleString).to(equal("Hello world!"))
+                            done()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

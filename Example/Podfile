@@ -7,6 +7,8 @@ target 'FireRoutes_Tests' do
   
   pod 'Quick'
   pod 'Nimble'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
   
 end
 

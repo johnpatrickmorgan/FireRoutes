@@ -7,8 +7,9 @@
 //
 
 import FireRoutes
-import Foundation
 import Alamofire
+import ObjectMapper
+import AlamofireObjectMapper
 
 let baseURL = "http://www.myserver.com/api"
 
@@ -27,5 +28,41 @@ class JSONRoute: Route<Any> {
         super.init()
         request = GET(baseURL + "/example")
         responseSerializer = DataRequest.jsonResponseSerializer()
+    }
+}
+
+class ImageRoute: Route<UIImage> {
+    
+    init(userId: String) {
+        super.init()
+        request = GET(baseURL + "/avatar", parameters: ["userid" : userId])
+        responseSerializer = DataRequest.imageResponseSerializer()
+    }
+}
+
+struct MappedModel: Mappable {
+    
+    var exampleURL: URL!
+    var exampleString: String!
+    var exampleInt: Int!
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        
+        exampleURL       <- (map["Example_URL"], URLTransform())
+        exampleString    <- (map["Example_String"])
+        exampleInt       <- (map["Example_Int"])
+    }
+}
+
+class MappedModelRoute: Route<MappedModel> {
+    
+    override init() {
+        super.init()
+        request = GET(baseURL + "/model")
+        responseSerializer = DataRequest.ObjectMapperSerializer(nil)
     }
 }

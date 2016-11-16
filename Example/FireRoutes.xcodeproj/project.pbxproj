@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		822307501DDCD00E00AA0A0B /* ImageRouteSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 8223074E1DDCD00E00AA0A0B /* ImageRouteSample.png */; };
+		822307511DDCD00E00AA0A0B /* MappedModelRouteSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 8223074F1DDCD00E00AA0A0B /* MappedModelRouteSample.json */; };
 		82F22E0C1DDA32EB00ED2969 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F22E081DDA32EB00ED2969 /* Examples.swift */; };
 		82F22E0D1DDA32EB00ED2969 /* JSONRouteSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */; };
 		82F22E0E1DDA32EB00ED2969 /* StringRouteSample.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */; };
@@ -24,6 +26,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66D2A6024BAC2FC26D7E6D74 /* Pods-FireRoutes_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRoutes_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireRoutes_Tests/Pods-FireRoutes_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7D7AA0F29B97607AB98F712A /* FireRoutes.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FireRoutes.podspec; path = ../FireRoutes.podspec; sourceTree = "<group>"; };
+		8223074E1DDCD00E00AA0A0B /* ImageRouteSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageRouteSample.png; sourceTree = "<group>"; };
+		8223074F1DDCD00E00AA0A0B /* MappedModelRouteSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MappedModelRouteSample.json; sourceTree = "<group>"; };
 		82F22E081DDA32EB00ED2969 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 		82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONRouteSample.json; sourceTree = "<group>"; };
 		82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StringRouteSample.txt; sourceTree = "<group>"; };
@@ -71,9 +75,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				82F22E081DDA32EB00ED2969 /* Examples.swift */,
 				82F22E091DDA32EB00ED2969 /* Sample Data */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -100,6 +104,8 @@
 		82F22E091DDA32EB00ED2969 /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
+				8223074E1DDCD00E00AA0A0B /* ImageRouteSample.png */,
+				8223074F1DDCD00E00AA0A0B /* MappedModelRouteSample.json */,
 				82F22E0A1DDA32EB00ED2969 /* JSONRouteSample.json */,
 				82F22E0B1DDA32EB00ED2969 /* StringRouteSample.txt */,
 			);
@@ -145,7 +151,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
@@ -177,7 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822307511DDCD00E00AA0A0B /* MappedModelRouteSample.json in Resources */,
 				82F22E0D1DDA32EB00ED2969 /* JSONRouteSample.json in Resources */,
+				822307501DDCD00E00AA0A0B /* ImageRouteSample.png in Resources */,
 				82F22E0E1DDA32EB00ED2969 /* StringRouteSample.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +266,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -304,8 +314,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -324,6 +336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -65,3 +65,31 @@ extension SessionManager {
 
     }
 }
+
+enum ImageSerializationError: Error {
+    
+    case unsupportedDataFormat
+}
+
+/**
+ Extension with convenience methods for serializing response data.
+ */
+extension Request {
+    
+    /**
+     Provides a `ResponseSerializer` instance for serializing image data into a UIImage.
+     
+     - returns: A `ResponseSerializer` instance for serializing image data.
+     */
+    public static func imageResponseSerializer() -> DataResponseSerializer<UIImage> {
+        
+        return DataResponseSerializer { request, response, data, error in
+            
+            guard let data = data, data.count > 0 else { return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength)) }
+            
+            guard let image = UIImage(data: data) else { return .failure(ImageSerializationError.unsupportedDataFormat) }
+
+            return .success(image)
+        }
+    }
+}
