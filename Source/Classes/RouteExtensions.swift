@@ -24,7 +24,7 @@ extension Route {
      
      - returns: A URLRequest instance.
      */
-    final public func request(_ method: Alamofire.HTTPMethod = .get, _ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
+    final public func request(_ method: Alamofire.HTTPMethod = .get, _ url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
 
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
@@ -44,7 +44,7 @@ extension Route {
      
      - returns: A URLRequest instance.
      */
-    final public func GET(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
+    final public func GET(_ url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = URLEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
         
         return request(.get, url, parameters: parameters, encoding: encoding, headers: headers)
     }
@@ -59,7 +59,7 @@ extension Route {
      
      - returns: A URLRequest instance.
      */
-    final public func POST(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
+    final public func POST(_ url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
         
         return request(.post, url, parameters: parameters, encoding: encoding, headers: headers)
     }
@@ -74,7 +74,7 @@ extension Route {
      
      - returns: A URLRequest instance.
      */
-    final public func PUT(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
+    final public func PUT(_ url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
         
         return request(.put, url, parameters: parameters, encoding: encoding, headers: headers)
     }
@@ -89,7 +89,7 @@ extension Route {
      
      - returns: A URLRequest instance.
      */
-    final public func DELETE(_ url: URLConvertible, parameters: [String : AnyObject]? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
+    final public func DELETE(_ url: URLConvertible, parameters: Parameters? = nil, encoding: ParameterEncoding = JSONEncoding(), headers: HTTPHeaders? = nil) -> URLRequest? {
         
         return request(.delete, url, parameters: parameters, encoding: encoding, headers: headers)
     }
