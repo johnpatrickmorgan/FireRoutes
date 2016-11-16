@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 
   s.name             = "FireRoutes"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "A lightweight extension to Alamofire to simplify API calls."
 
   s.description      = <<-DESC
-                        FireRoutes introduces the concept of a Route. A Route represents a particular API call - how the request should be structured and how the response data should be interpreted. 
+                        FireRoutes introduces the concept of a Route. A Route represents a particular API call - how the request should be structured and how the response data should be interpreted.
                        DESC
 
   s.homepage         = "https://github.com/johnpatrickmorgan/FireRoutes"
