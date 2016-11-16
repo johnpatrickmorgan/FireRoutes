@@ -10,7 +10,7 @@ import Alamofire
 
 public enum FireRouteError: Error {
     
-    case routeNotSubclassed
+    case routeMissingSerializer
     case routeMissingRequest
 }
 
@@ -23,25 +23,20 @@ open class Route<U>: URLRequestConvertible, DataResponseSerializerProtocol {
     public typealias SerializedObject = U
 
     /**
-     The URLRequest for this route - ensures conformance to `URLRequestConvertible` protocol.
-     */
-    public func asURLRequest() throws -> URLRequest {
-        
-        guard let request = request else { throw FireRouteError.routeMissingRequest }
-        return try request.asURLRequest()
-    }
-    
-    /**
-     The `ResponseSerializer` for this route - The `Route` superclass's implementation of `ResponseSerializerType` simply delegates
-     response serialization to this `ResponseSerializer`. Concrete subclasses can set this property to any ResponseSerializer, such
-     as those included in Alamofire.
+     The `DataResponseSerializer` for this route - The `Route` superclass's implementation of `DataResponseSerializerProtocol` 
+     simply delegates response serialization to this `DataResponseSerializer`. Concrete subclasses can set this property to
+     any DataResponseSerializer, such as those included in Alamofire.
      */
     public var responseSerializer: DataResponseSerializer<U> = DataResponseSerializer { _,_,_,_ in
         
-        return Result.failure(FireRouteError.routeNotSubclassed)
+        return Result.failure(FireRouteError.routeMissingSerializer)
     }
     
-    /// TODO
+    /**
+     The `request` for this route - The `Route` superclass's implementation of `URLRequestConvertible` simply delegates
+    `URLRequest` creation to this `request`. Concrete subclasses can set this property to any `URLRequestConvertible`, 
+     or use the convenience methods on `Route`.
+     */
     public var request: URLRequestConvertible?
     
     /**
@@ -50,6 +45,15 @@ open class Route<U>: URLRequestConvertible, DataResponseSerializerProtocol {
     final public var serializeResponse: (URLRequest?, HTTPURLResponse?, Data?, Error?) -> Result<U> {
         
         return responseSerializer.serializeResponse
+    }
+    
+    /**
+     There should be no need to customize this behaviour - it simply defers to the `request`'s implementation of `URLRequestConvertible`.
+     */
+    final public func asURLRequest() throws -> URLRequest {
+        
+        guard let request = request else { throw FireRouteError.routeMissingRequest }
+        return try request.asURLRequest()
     }
     
     /**
