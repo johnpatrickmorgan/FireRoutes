@@ -40,21 +40,28 @@ extension SessionManager {
      */
     public func stub<T>(_ route: Route<T>, stub: RequestStub, completionHandler: @escaping (DataResponse<T>) -> Void) {
         
-        let request = try! route.asURLRequest()
-        let data = stub.result.value
-        let error = stub.result.error
-        let delay = stub.delay
-        
-        let result = route.serializeResponse(request, nil, data, error)
-        let response = DataResponse(request: request, response: nil, data: data, result: result)
-        
-        if (delay == 0.0) {
-            completionHandler(response)
-        }
-        else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+        do {
+            let request = try route.asURLRequest()
+            let data = stub.result.value
+            let error = stub.result.error
+            let delay = stub.delay
+            
+            let result = route.serializeResponse(request, nil, data, error)
+            let response = DataResponse(request: request, response: nil, data: data, result: result)
+            
+            if (delay == 0.0) {
                 completionHandler(response)
             }
+            else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                    completionHandler(response)
+                }
+            }
+        } catch {
+            let result: Result<T> = Result.failure(FireRouteError.routeMissingRequest)
+            let response = DataResponse(request: nil, response: nil, data: nil, result: result)
+            completionHandler(response)
         }
+
     }
 }
