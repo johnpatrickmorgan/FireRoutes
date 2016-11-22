@@ -28,7 +28,7 @@ class AvatarRoute: Route<UIImage> {
 This captures in a single class all of the client's expectations of the avatar endpoint. Defining a number of routes in a single `Routes.swift` file provides a useful catalogue of all the endpoints your app may use.
 
 
-The `Route` concept also simplifies the code that originates the request:
+The `Route` concept also simplifies the code that originates the request via an extension to Alamofire's `SessionManager`:
 
 ```swift
 manager.request(AvatarRoute(userID:"jmorgan")) { response in
@@ -48,8 +48,8 @@ class MappedModelRoute: Route<MappedModel> {
     
     override init() {
         super.init()
-        URLRequest = GET(baseURL + "/model")
-        responseSerializer = Request.ObjectMapperSerializer(nil)
+        request = GET(baseURL + "/model")
+        responseSerializer = DataRequest.ObjectMapperSerializer(nil)
     }
 }
 ```
