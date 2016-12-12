@@ -66,7 +66,7 @@ extension SessionManager {
     }
 }
 
-enum ImageSerializationError: Error {
+public enum ImageSerializationError: Error {
     
     case unsupportedDataFormat
 }
