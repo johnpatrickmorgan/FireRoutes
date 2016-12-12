@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "FireRoutes"
-  s.version          = "0.2.3"
+  s.version          = "0.2.4"
   s.summary          = "A lightweight extension to Alamofire to simplify API calls."
 
   s.description      = <<-DESC
